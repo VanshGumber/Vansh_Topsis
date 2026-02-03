@@ -13,10 +13,6 @@ A Python-based command line implementation of the TOPSIS method.
 - Generates an output CSV file
 - Includes comprehensive input validation
 
-Location:
-```
-Part1/
-```
 
 ---
 
@@ -31,10 +27,6 @@ The TOPSIS implementation has been packaged and published to PyPI.
 PyPI Link:
 https://pypi.org/project/topsis-vansh-102303922/
 
-Location:
-```
-Part2/
-```
 
 ---
 
@@ -49,8 +41,4 @@ A web-based TOPSIS service built using Streamlit.
 
 Secrets (email credentials) are securely managed using Streamlit Cloud Secrets.
 
-Location:
-```
-Part3/
-```
 
