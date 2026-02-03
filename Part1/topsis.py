@@ -89,3 +89,4 @@ df["Rank"] = df["Topsis Score"].rank(ascending=False, method="max").astype(int)
 
 df.to_csv(out, index=False)
 print("TOPSIS result saved to", out)
+
