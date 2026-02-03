@@ -1,109 +1,40 @@
-# TOPSIS
+# Part II – PyPI Package (TOPSIS)
 
-A Python implementation of the **TOPSIS** multi-criteria decision-making (MCDM) method.
-
----
-
-## Features
-- Implements the standard TOPSIS algorithm
-- Accepts CSV input files
-- Supports custom weights and impacts
-- Outputs TOPSIS score and rank
-- Command-line based and easy to integrate
+## 1. Objective
+The objective of this part is to package the TOPSIS implementation as a reusable Python module and publish it on PyPI.
 
 ---
 
-## What is TOPSIS?
-TOPSIS (Technique for Order Preference by Similarity to Ideal Solution) is a multi-criteria decision analysis method.  
-It identifies solutions from a finite set of alternatives based on their distance from an **ideal best** and an **ideal worst** solution.
+## 2. Description
+The TOPSIS algorithm developed in Part I has been converted into a Python package following standard packaging conventions.  
+The package can be installed and executed directly from the command line.
 
 ---
 
-## Input File Format
-The input file must be a **CSV file** with:
-- **First column**: Names/IDs of alternatives (non-numeric)
-- **Remaining columns**: Criteria values (numeric)
+## 3. Package Details
 
-### Sample Input (Table)
-
-| Name | P1 | P2 | P3 | P4 | P5 |
-|-----:|---:|---:|---:|---:|---:|
-| M1 | 0.71 | 0.50 | 3.0 | 40.4 | 11.15 |
-| M2 | 0.60 | 0.36 | 4.7 | 41.2 | 11.72 |
-| M3 | 0.65 | 0.42 | 3.2 | 53.5 | 14.44 |
-| M4 | 0.84 | 0.71 | 3.9 | 56.8 | 15.56 |
-| M5 | 0.60 | 0.36 | 6.3 | 50.4 | 14.42 |
-| M6 | 0.65 | 0.42 | 5.0 | 64.3 | 17.59 |
-| M7 | 0.94 | 0.88 | 4.1 | 57.4 | 15.83 |
-| M8 | 0.71 | 0.50 | 4.1 | 37.3 | 10.65 |
+- Package Name: topsis-vansh-102303922
+- Platform: PyPI
 
 ---
 
-## Installation
-
-Make sure you have Python 3 installed. Then install the required libraries:
+## 4. Installation
 
 ```bash
-pip install pandas numpy
+pip install topsis-vansh-102303922
 ```
 
 ---
 
-## Usage
-
-Run the script from the command line:
+## 5. Command Line Usage
 
 ```bash
-python topsis.py <InputDataFile> <Weights> <Impacts> <OutputResultFileName>
-```
-
-### Arguments
-- **InputDataFile**: CSV file containing the dataset
-- **Weights**: Comma-separated numeric weights (e.g., `1,1,1,1,1`)
-- **Impacts**: Comma-separated impacts (`+` for benefit, `-` for cost)
-- **OutputResultFileName**: Name of the output CSV file
-
-### Example
-```bash
-python topsis.py data.csv 1,1,1,1,1 +,+,+,+,+ result.csv
+topsis data.csv 1,1,1,1,1 +,+,+,+,+ output.csv
 ```
 
 ---
 
-## Output
-The output CSV file will contain:
-- **Topsis Score**: Performance score of each alternative
-- **Rank**: Ranking based on TOPSIS score (higher is better)
+## 6. PyPI Link
 
-### Sample Output (Table)
+https://pypi.org/project/topsis-vansh-102303922/
 
-| Name | P1 | P2 | P3 | P4 | P5 | Topsis Score | Rank |
-|-----:|---:|---:|---:|---:|---:|-------------:|-----:|
-| M1 | 0.71 | 0.50 | 3.0 | 40.4 | 11.15 | 0.1961 | 8 |
-| M2 | 0.60 | 0.36 | 4.7 | 41.2 | 11.72 | 0.2386 | 7 |
-| M3 | 0.65 | 0.42 | 3.2 | 53.5 | 14.44 | 0.2661 | 5 |
-| M4 | 0.84 | 0.71 | 3.9 | 56.8 | 15.56 | 0.5743 | 2 |
-| M5 | 0.60 | 0.36 | 6.3 | 50.4 | 14.42 | 0.4278 | 4 |
-| M6 | 0.65 | 0.42 | 5.0 | 64.3 | 17.59 | 0.4689 | 3 |
-| M7 | 0.94 | 0.88 | 4.1 | 57.4 | 15.83 | 0.6954 | 1 |
-| M8 | 0.71 | 0.50 | 4.1 | 37.3 | 10.65 | 0.2503 | 6 |
-
----
-
-## Error Handling
-The program validates:
-- File existence
-- Numeric criteria columns
-- Correct number of weights and impacts
-- Valid impact symbols (`+` or `-`)
-
-Meaningful error messages are shown if validation fails.
-
----
-
-## Dependencies
-- pandas
-- numpy
-- sys (standard library)
-
----
