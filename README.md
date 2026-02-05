@@ -1,4 +1,4 @@
-# Assignment1 - Topsis
+# Topsis
 
 This repository contains the complete implementation of the TOPSIS (Technique for Order Preference by Similarity to Ideal Solution) assignment, divided into three parts.
 
